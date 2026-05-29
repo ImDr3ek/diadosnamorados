@@ -1,0 +1,24 @@
+.Topico{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+   width: 400px;  
+  height: 120px;
+
+  background-image: url("tITULO\ PIXELAR.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  text-indent: -9999px;
+  overflow: hidden;
+}
+ header {
+  background-color: #4e7783;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+   }
+   footer{
+    margin-top: 1000px;
+   }
