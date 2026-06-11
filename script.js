@@ -74,11 +74,6 @@ let c2 = 0
 
 
 
-function escolha(){
-
-    
-}
-
 
 function image(){
     
@@ -101,6 +96,11 @@ function image2(){
     
 }
 
+
+function escolha(){
+
+    
+}
 
 
 // function escolha(){
