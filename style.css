@@ -89,6 +89,14 @@ text-align: center;
 
 } */
 
+.hide{
+  display: none !important
+}
+
+.visible{
+  display: flex !important;
+}
+
 #quiz {
     display: flex;
     justify-content: center;
@@ -149,4 +157,39 @@ text-align: center;
         margin-bottom: 50px;
     font-size: 50px;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: #4e7783;
   }
+
+  .opcionReinicio{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 50px;
+  }
+
+  .opcionReinicio button{
+     width: 200px;
+    height: 85px;
+    cursor: pointer;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .opcionReinicio button:hover{
+        transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+.opcionReinicio button:active{
+    transform: scale(0.98);
+}
+
+.opcionReinicio{
+  display: none;
+}
