@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelsLovers</title>
-      <link rel="icon" type="image/png" href="logotipo.png">
+    <link rel="icon" type="image/png" href="logotipo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,11 +17,11 @@
         <!-- <div class="Topico">
         </div> -->
         <img class="Topico" src="tITULO PIXELAR.png" alt="">
-        
-        <div  class="topicoM">
+
+        <div class="topicoM">
             <h4 class="frase" id="frase">Feito para corações 8-bit</h4>
         </div>
-        
+
         <!-- <div class="sidebar" id="sidebar">
             
             <button onclick="menuFechar()" class="btnMenu" id="btnSideBar" >☰</button>
@@ -33,31 +34,51 @@
             </ul>
         </div>
     </div> -->
-    </header> 
-    
-  <h1>Elimina um casal</h1>
-<div id="quiz">
-    <div class="opcion" id="opt1">
-        <img id="img1" src="Gemini_Generated_Image_r8dsskr8dsskr8ds.png" alt="">
-        <button onclick="image()"><p id="escolha1">INICIAR</p></button>
+    </header>
+
+    <h1>Elimina um casal</h1>
+
+    <!-- <div class="tela ativa">
+      <button onclick="telaInicio()">Iniciar Jogo</button>
+  </div> -->
+
+    <div id="quiz" class="tela">
+        <div id="layout21">
+
+            <div class="opcion" id="opt1">
+                <button onclick="image()"><img id="img1" src="Gemini_Generated_Image_r8dsskr8dsskr8ds.png"
+                        alt=""></button>
+            </div>
+
+            <div class="opcion" id="opt2">
+                <button onclick="image2()"><img id="img2" src="Gemini_Generated_Image_r8dsskr8dsskr8ds.png"
+                    alt=""></button>
+                </div>
+            </div>
+            
+            <div id="teste21">
+
+                <div>
+                    <output id="teste1" class="nomesCasasis"></output>
+                </div>
+                
+                <div>
+                    <output id="teste2" class="nomesCasasis"></output>
+                </div>
+            </div>
+
+
     </div>
 
-    <div class="opcion" id="opt2">
-        <img id="img2" src="Gemini_Generated_Image_r8dsskr8dsskr8ds.png" alt="">
-        <button onclick="image2()"><p id="escolha2">JOGO</p></button>
+    <div class="opcionReinicio" id="reinicio">
+        <!-- <output id="escolhido"><h2></h2></output> -->
+        <button onclick="reinicio()">RINICIAR</button>
     </div>
 
-    
-</div>
+    <footer>
 
-<div class="opcionReinicio" id="reinicio">
-    <output id="escolhido"><h2></h2></output>
-    <button onclick="reinicio()">RINICIAR</button>
-</div>
-
-<footer>
-    
-</footer>
-<script src="script.js"></script>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

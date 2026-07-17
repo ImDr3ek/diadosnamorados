@@ -99,10 +99,11 @@ text-align: center;
 
 #quiz {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-    gap: 350px;
+    gap: 50px;
 }
 
 #quiz button {
@@ -134,12 +135,7 @@ text-align: center;
     text-align: center;
 }
 
-.opcion{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-}
+
 
 .opcion img{
     width:250px;
@@ -193,3 +189,25 @@ text-align: center;
 .opcionReinicio{
   display: none;
 }
+
+#layout21{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 180px;
+  align-items: center;
+}
+#teste21{
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+
+/* .tela{
+  display: none;
+}
+
+.ativa{
+  display: block; 
+} */

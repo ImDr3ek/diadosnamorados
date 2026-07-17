@@ -31,40 +31,32 @@ setInterval(() => {
 
 // }
 
-let casais1 = [
-
-"Madeline e Theo",
-"Mae Borowski e Gregg Lee", "Ryu e Chun-Li",
-"May e Cody", "Kratos e Faye",
-"Ellie e Dina", "V e Judy Alvarez",
-"Sara e Daecon", "Leon S. Kennedy e Ada Wong",
-"Lara Croft e Sam Nishimura", "Tracer e Emily"
-
+const casais = [
+  { casal: "Mario e Peach", img: "0.png" },
+  { casal: "Link e Zelda", img: "1.png" },
+  { casal: "Sonic e Amy Rose", img: "2.png" },
+  { casal: "Cloud Strife e Tifa Lockhart", img: "3.png" },
+  { casal: "Squall Leonhart e Rinoa Heartilly", img: "4.png" },
+  { casal: "Tidus e Yuna", img: "5.png" },
+  { casal: "Geralt de Rívia e Yennefer", img: "6.png" },
+  { casal: "Commander Shepard e Liara T'Soni", img: "7.png" },
+  { casal: "Nathan Drake e Elena Fisher", img: "8.png" },
+  { casal: "James Sunderland e Mary Shepherd-Sunderland", img: "9.png" },
+  { casal: "Max Caulfield e Chloe Price", img: "10.png" },
+  { casal: "Madeline e Theo", img: "11.png" },
+  { casal: "Mae Borowski e Gregg Lee", img: "12.png" },
+  { casal: "Ryu e Chun-Li", img: "13.png" },
+  { casal: "May e Cody", img: "14.png" },
+  { casal: "Kratos e Faye", img: "15.png" },
+  { casal: "Ellie e Dina", img: "16.png" },
+  { casal: "V e Judy Alvarez", img: "17.png" },
+  { casal: "Sara e Daecon", img: "18.png" },
+  { casal: "Leon S. Kennedy e Ada Wong", img: "19.png" },
+  { casal: "Lara Croft e Sam Nishimura", img: "20.png" },
+  { casal: "Tracer e Emily", img: "21.png" }
 ]
 
-let casais2 = [
 
-"Mario e Peach", "Link e Zelda",
-"Sonic e Amy Rose", "Cloud Strife e Tifa Lockhart",
-"Squall Leonhart e Rinoa Heartilly", "Tidus e Yuna",
-"Geralt de Rívia e Yennefer", "Commander Shepard e Liara T'Soni",
-"Nathan Drake e Elena Fisher", "James Sunderland e Mary Shepherd-Sunderland",
-"Max Caulfield e Chloe Price"
-]
-
-let imagenes = [
-    "11.png","12.png",
-    "13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png"
-]
-let imagenes2 = [
-    "0.png","1.png","2.png","3.png","4.png",
-    "5.png","6.png","7.png","8.png","9.png","10.png"
-];
-
-let c1 = 0
-let c2 = 0
-let img = 0
-let img2 = 0
 const opt1 = document.getElementById('opt1')
 const opt2 = document.getElementById('opt2')
 const reinicioBtn = document.getElementById('reinicio')
@@ -72,67 +64,66 @@ const reinicioBtn = document.getElementById('reinicio')
 
 
 function image(){
+    let sortido = (Math.floor(Math.random()*casais.length))
     
-    c1 = 0
-    img = 0
-
-    console.log('numero random ' + c1)
-
-    document.getElementById('escolha1').innerHTML = casais1[c1]
-    document.getElementById('img1').src = imagenes[img]
-
-    console.log("Lista atual: " + casais1);
-    console.log('casal escolido ' + casais1[c1])
-
-    casais1.splice(c1,1);
-    console.log("Lista atual: " + casais1);
+    document.getElementById('img1').src = casais[sortido].img
+    document.getElementById("teste1").innerHTML = casais[sortido].casal
+    console.log("el sorteado " + sortido)
+    let teste = casais.splice(sortido, 1)
+    console.log("el eliminado " + teste)
     
-    console.log("-------------------")
-    console.log("Lista atual de imagenes: " + imagenes);
-    console.log('casal escolido ' + imagenes[c1])
-
-    imagenes.splice(img,1)
     
-    console.log("Tamamnho da lista" + casais1.length)
-    console.log("Lista atual de imagenes: " + imagenes);
-    
-    if(casais1.length === 0){
-        // console.log("cheguei")
+    if(casais.length === 0){
+       
         opt1.classList.add('hide')
+        document.getElementById("teste1").innerHTML = ""
         reinicioBtn.classList.add('visible')
-        // console.log(opt1.className);
-
+        
+        
     }
-
-    c1 ++
-    img ++
+    
+    console.log("casasissada " + casais)
 }
 function image2(){
-    c2 = 0
-    img2 = 0
-    document.getElementById('escolha2').innerHTML = casais2[c2]
-    document.getElementById('img2').src = imagenes2[img2]
-    casais2.splice(c2,1);
-    imagenes2.splice(img2,1)
     
-    if(casais2.length === 0){
-        opt2.classList.add('hide')
+    let sortido = (Math.floor(Math.random()*casais.length))
+      document.getElementById('img2').src = casais[sortido].img
+    document.getElementById("teste2").innerHTML = casais[sortido].casal
+    console.log("el sorteado " + sortido)
+    let teste = casais.splice(sortido, 1)
+    console.log("el eliminado " + teste)
+ 
+    
+    if(casais.length === 0){
+        opt1.classList.add('hide')
+        document.getElementById("teste2").innerHTML = ""
         reinicioBtn.classList.add('visible')
-    }
-    c2 ++
-    img2 ++
+
+    } 
+    console.log("casasissada " + casais)
 
 }
 
-
 function reinicio(){
-escolhido = document.getElementById('escolhido').innerHTML = "BORA ESCOLHER OUTRO CASAL?"
+// escolhido = document.getElementById('escolhido').innerHTML = "BORA ESCOLHER OUTRO CASAL?"
 window.location.reload()
     
 }
+ 
 
 
-// function escolha(){
+// function iniciarJogo(){
 
+//     const inicio = document.querySelectorAll(".tela")
+//     inicio.forEach(function(pedro){pedro.classList.remove("ativa")}
+// )
     
 // }
+
+// function telaInicio(){
+// iniciarJogo()
+// document.getAnimations("quiz").classList.add("ativa")
+
+// }
+
+
